@@ -2492,7 +2492,7 @@ static char *interpret_move(const game_state *from, game_ui *ui,
 
     if (button == RIGHT_BUTTON) {
 	if (cx < 0 || cx >= from->w || cy < 0 || cy >= from->h)
-	    return NULL;
+	    goto uncover;
 
 	/*
 	 * Right-clicking only works on a covered square, and it
